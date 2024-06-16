@@ -4,29 +4,24 @@ import Image from "next/image";
 import Upgrade from '../../public/images/UpgradeImage.png';
 import { useState } from 'react';
 import { Tab } from '@headlessui/react';
-import Draft from '../pages/draft';
-import Scheduled from '../pages/scheduled';
-import Published from '../pages/published';
-import Insight from '../pages/insight';
+import  NewOutput  from "./NewOutput";
+import  History  from "./history";
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-const MyPosts = () => {
+const OutputTab = () => {
   let [categories] = useState({
-    Draft: <Draft />,
-    Scheduled: <Scheduled />,
-    Published: <Published />,
-    Insight: <Insight />,
+    NewOutput: <NewOutput />,
+    History: <History />,
+    
   });
 
   return (
     <div>
-      {/* <div className="flex justify-between items-center mb-4">
-        <h1 className="text-[24px] font-[500] text-[#101010]">My Posts</h1>
-        <Image src={Upgrade} width={390} height={40} alt="upgrade" />
-      </div> */}
+   
       <Tab.Group>
         <Tab.List className="flex gap-8 border-b-2 border-[#F6F7F9]">
           {Object.keys(categories).map((category) => (
@@ -62,4 +57,4 @@ const MyPosts = () => {
   );
 };
 
-export default MyPosts;
+export default OutputTab;
