@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Upgrade from '../../public/images/UpgradeImage.png';
 import { useState } from 'react';
 import { Tab } from '@headlessui/react';
 import  NewOutput  from "./NewOutput";
