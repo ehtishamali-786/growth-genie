@@ -4,7 +4,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import Upgrade from '../../public/images/UpgradeImage.png';
+import Upgrade from '../../public/images/upgradeImage.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
